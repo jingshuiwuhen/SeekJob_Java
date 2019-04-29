@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:scrollbars="vertical">
+
+    <TextView
+        android:id="@+id/tv_user_name_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="end|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/create_account_activity_user_name"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/tv_password_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent=".33" />
+
+    <EditText
+        android:id="@+id/et_user_name_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_text_bottom_line"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_user_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_user_name_text"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/tv_password_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="end|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/create_account_activity_password"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/tv_comfirm_password_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name_text"
+        app:layout_constraintWidth_percent=".33" />
+
+    <EditText
+        android:id="@+id/et_password_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_text_bottom_line"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_password_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_password_text"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/tv_comfirm_password_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="end|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/create_account_activity_comfirm_password"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/tv_nick_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_password_text"
+        app:layout_constraintWidth_percent=".33" />
+
+    <EditText
+        android:id="@+id/et_comfirm_password_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_text_bottom_line"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_comfirm_password_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_comfirm_password_text"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/tv_nick_name_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="end|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/create_account_activity_nick_name"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/tv_mail_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_comfirm_password_text"
+        app:layout_constraintWidth_percent=".33" />
+
+    <EditText
+        android:id="@+id/et_nick_name_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_text_bottom_line"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_nick_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_nick_name_text"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/tv_mail_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="end|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/create_account_activity_mail_address"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/tv_phone_number_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nick_name_text"
+        app:layout_constraintWidth_percent=".33" />
+
+    <EditText
+        android:id="@+id/et_mail_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_text_bottom_line"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_mail_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_mail_text"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/tv_phone_number_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="end|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/create_account_activity_phone_number"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/tv_user_level_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_mail_text"
+        app:layout_constraintWidth_percent=".33" />
+
+    <EditText
+        android:id="@+id/et_phone_number_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_text_bottom_line"
+        android:inputType="phone"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_phone_number_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_phone_number_text"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/tv_user_level_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="end|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/create_account_activity_user_level"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_phone_number_text"
+        app:layout_constraintWidth_percent=".33" />
+
+    <RadioGroup
+        android:id="@+id/rg_user_level"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_user_level_text"
+        app:layout_constraintWidth_percent=".5">
+
+        <RadioButton
+            android:id="@+id/rb_private"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/create_account_activity_private"
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/rb_company"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/create_account_activity_company"
+            android:textColor="@android:color/black" />
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>

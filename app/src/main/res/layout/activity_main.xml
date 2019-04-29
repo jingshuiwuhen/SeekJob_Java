@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background_white"
+    android:orientation="vertical"
+    android:weightSum="15">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14" />
+
+    <LinearLayout
+        android:id="@+id/ll_footer_tab"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/rl_footer_tab_item_all_jobs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:duplicateParentState="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tv_footer_tab_item_title_all_jobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/footer_tab_item_title_all_jobs"
+                android:textColor="@color/footer_tab_item_title_text_color_selector"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/tv_footer_tab_item_title_all_jobs"
+                android:layout_margin="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/footer_tab_item_icon_all_jobs_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_footer_tab_item_publish"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:duplicateParentState="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tv_footer_tab_item_title_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/footer_tab_item_title_publish"
+                android:textColor="@color/footer_tab_item_title_text_color_selector"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/tv_footer_tab_item_title_publish"
+                android:layout_margin="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/footer_tab_item_icon_publish_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_footer_tab_item_more"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:duplicateParentState="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tv_footer_tab_item_title_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/footer_tab_item_title_more"
+                android:textColor="@color/footer_tab_item_title_text_color_selector"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/tv_footer_tab_item_title_more"
+                android:layout_margin="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/footer_tab_item_icon_more_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

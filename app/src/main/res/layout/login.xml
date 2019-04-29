@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_user_name_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="end|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/login_activity_user_name"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/tv_user_name_error_msg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent=".3" />
+
+    <EditText
+        android:id="@+id/et_user_name_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_text_bottom_line"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_user_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_user_name_text"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/tv_user_name_error_msg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:autoSizeTextType="uniform"
+        android:drawableStart="@drawable/icon_error"
+        android:paddingStart="5dp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tv_password_text"
+        app:layout_constraintEnd_toEndOf="@id/et_user_name_input"
+        app:layout_constraintHeight_percent=".03"
+        app:layout_constraintStart_toStartOf="@id/et_user_name_input"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name_text" />
+
+    <TextView
+        android:id="@+id/tv_password_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="end|center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/login_activity_password"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/tv_password_error_msg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name_error_msg"
+        app:layout_constraintWidth_percent=".3" />
+
+    <EditText
+        android:id="@+id/et_password_input"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_text_bottom_line"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_password_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_password_text"
+        app:layout_constraintWidth_percent=".5" />
+
+    <TextView
+        android:id="@+id/tv_password_error_msg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:autoSizeTextType="uniform"
+        android:drawableStart="@drawable/icon_error"
+        android:paddingStart="5dp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_login"
+        app:layout_constraintEnd_toEndOf="@id/et_password_input"
+        app:layout_constraintHeight_percent=".03"
+        app:layout_constraintStart_toStartOf="@id/et_password_input"
+        app:layout_constraintTop_toBottomOf="@id/tv_password_text" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/login_activity_login"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/tv_create_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_password_error_msg"
+        app:layout_constraintWidth_percent=".2" />
+
+    <TextView
+        android:id="@+id/tv_create_account"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+</android.support.constraint.ConstraintLayout>

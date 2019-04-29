@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SeekJob</string>
+
+    <string name="footer_tab_item_title_all_jobs">All Jobs</string>
+    <string name="footer_tab_item_title_publish">Publish</string>
+    <string name="footer_tab_item_title_more">More</string>
+
+    <string name="user_database_name">user.db</string>
+
+    <string name="more_fragment_item_one">item one</string>
+    <string name="more_fragment_login">Click To Log In</string>
+
+    <string name="login_activity_user_name">User Name</string>
+    <string name="login_activity_password">Password</string>
+    <string name="login_activity_login">Login</string>
+    <string name="login_activity_have_not_account_create">Have not account? Create account</string>
+    <string name="login_activity_hint_user_name_cannot_be_null">User name cannot be null</string>
+    <string name="login_activity_hint_user_name_is_not_exist">User name is not exist</string>
+    <string name="login_activity_hint_password_cannot_be_null">Password cannot be null</string>
+    <string name="login_activity_hint_password_incorrect">Password incorrect</string>
+
+    <string name="create_account_activity_user_name">User Name</string>
+    <string name="create_account_activity_password">Password</string>
+    <string name="create_account_activity_comfirm_password">Comfirm Password</string>
+    <string name="create_account_activity_nick_name">NickName</string>
+    <string name="create_account_activity_mail_address">Mail Address</string>
+    <string name="create_account_activity_phone_number">Phone Number</string>
+    <string name="create_account_activity_user_level">User Level</string>
+    <string name="create_account_activity_private">Private</string>
+    <string name="create_account_activity_company">Company</string>
+</resources>
