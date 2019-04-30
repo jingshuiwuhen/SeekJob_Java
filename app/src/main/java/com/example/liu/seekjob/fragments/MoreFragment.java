@@ -30,6 +30,7 @@ public class MoreFragment extends Fragment {
     private TextView mLogInTextView;
     private TextView mNickNameTextView;
     private TextView mUserNameTextView;
+    private ImageView mLogoutBackgroundImageView;
 
     public static MoreFragment getInstance() {
         MoreFragment fragment = new MoreFragment();
@@ -68,6 +69,7 @@ public class MoreFragment extends Fragment {
         mLogInTextView = mRootView.findViewById(R.id.tv_login);
         mNickNameTextView = mRootView.findViewById(R.id.tv_user_nick_name);
         mUserNameTextView = mRootView.findViewById(R.id.tv_user_name);
+        mLogoutBackgroundImageView = mRootView.findViewById(R.id.iv_item_log_out_background);
     }
 
     private void initLogState() {
@@ -87,6 +89,10 @@ public class MoreFragment extends Fragment {
             Intent intent = new Intent();
             intent.setClass(getActivity(), LoginActivity.class);
             MoreFragment.this.startActivityForResult(intent, Constants.INTENT_REQUEST_CODE);
+        });
+
+        mLogoutBackgroundImageView.setOnClickListener(v -> {
+            setLogOutState();
         });
     }
 

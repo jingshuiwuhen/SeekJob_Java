@@ -19,6 +19,8 @@
     <string name="login_activity_hint_password_cannot_be_null">Password cannot be null</string>
     <string name="login_activity_hint_password_incorrect">Password incorrect</string>
 
+    <string name="create_account_activity_title">Create Account</string>
+    <string name="create_account_activity_register">Register</string>
     <string name="create_account_activity_user_name">User Name</string>
     <string name="create_account_activity_password">Password</string>
     <string name="create_account_activity_comfirm_password">Comfirm Password</string>

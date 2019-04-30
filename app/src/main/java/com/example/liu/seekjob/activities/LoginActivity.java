@@ -67,6 +67,11 @@ public class LoginActivity extends Activity {
         unbindService(mConn);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     private void initServices() {
         bindService(new Intent(LoginActivity.this, DataManagerService.class), mConn, BIND_AUTO_CREATE);
     }
@@ -91,7 +96,8 @@ public class LoginActivity extends Activity {
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
             public void onClick(View widget) {
-                Toast.makeText(LoginActivity.this, "触发点击事件!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
+                startActivityForResult(intent, Constants.INTENT_REQUEST_CODE);
             }
         };
         style.setSpan(clickableSpan, getString(R.string.login_activity_have_not_account_create).indexOf("Create account"), getString(R.string.login_activity_have_not_account_create).length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
