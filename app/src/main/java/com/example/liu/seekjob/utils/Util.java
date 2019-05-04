@@ -5,8 +5,6 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.widget.EditText;
 
-import com.example.liu.seekjob.services.DataManagerService;
-
 public class Util {
 
     public static void setBooleanValueToSharedPreferences(Context context, String name, String key, boolean value) {

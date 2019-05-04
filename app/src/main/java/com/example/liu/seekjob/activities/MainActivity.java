@@ -16,7 +16,7 @@ import com.example.liu.seekjob.R;
 import com.example.liu.seekjob.fragments.AllJobsFragment;
 import com.example.liu.seekjob.fragments.MoreFragment;
 import com.example.liu.seekjob.fragments.PublishFragment;
-import com.example.liu.seekjob.services.DataManagerService;
+import com.example.liu.seekjob.services.UserDataManagerService;
 
 public class MainActivity extends FragmentActivity {
 
@@ -27,23 +27,23 @@ public class MainActivity extends FragmentActivity {
     private AllJobsFragment mAllJobsFragment;
     private PublishFragment mPublishFragment;
     private MoreFragment mMoreFragment;
-    private DataManagerService mDataManagerService;
+    private UserDataManagerService mUserDataManagerService;
 
     private ServiceConnection mConn = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            if (service instanceof DataManagerService.DataManagerBinder) {
-                mDataManagerService = ((DataManagerService.DataManagerBinder) service).getService();
+            if (service instanceof UserDataManagerService.DataManagerBinder) {
+                mUserDataManagerService = ((UserDataManagerService.DataManagerBinder) service).getService();
             }
 
-            if (mDataManagerService != null) {
+            if (mUserDataManagerService != null) {
                 initState();
             }
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            mDataManagerService = null;
+            mUserDataManagerService = null;
         }
     };
 
@@ -119,7 +119,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     private void initServices() {
-        bindService(new Intent(MainActivity.this, DataManagerService.class), mConn, BIND_AUTO_CREATE);
+        bindService(new Intent(MainActivity.this, UserDataManagerService.class), mConn, BIND_AUTO_CREATE);
     }
 
     private void switchFragment(Fragment fragment) {
@@ -131,7 +131,7 @@ public class MainActivity extends FragmentActivity {
         mCurrentFragment = fragment;
     }
 
-    public DataManagerService getDataManagerService() {
-        return mDataManagerService;
+    public UserDataManagerService getDataManagerService() {
+        return mUserDataManagerService;
     }
 }

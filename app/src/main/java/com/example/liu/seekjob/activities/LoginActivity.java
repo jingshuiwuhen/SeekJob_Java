@@ -17,11 +17,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.liu.seekjob.R;
 import com.example.liu.seekjob.db.beans.UserBean;
-import com.example.liu.seekjob.services.DataManagerService;
+import com.example.liu.seekjob.services.UserDataManagerService;
 import com.example.liu.seekjob.utils.Constants;
 import com.example.liu.seekjob.utils.Error;
 import com.example.liu.seekjob.utils.Util;
@@ -34,19 +33,19 @@ public class LoginActivity extends Activity {
     private EditText mPasswordEditText;
     private TextView mUserNameErrorMsgTextView;
     private TextView mPasswordErrorMsgTextView;
-    private DataManagerService mDataManagerService;
+    private UserDataManagerService mUserDataManagerService;
 
     private ServiceConnection mConn = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            if (service instanceof DataManagerService.DataManagerBinder) {
-                mDataManagerService = ((DataManagerService.DataManagerBinder) service).getService();
+            if (service instanceof UserDataManagerService.DataManagerBinder) {
+                mUserDataManagerService = ((UserDataManagerService.DataManagerBinder) service).getService();
             }
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            mDataManagerService = null;
+            mUserDataManagerService = null;
         }
     };
 
@@ -70,10 +69,20 @@ public class LoginActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) {
+            if (data == null)
+                return;
+
+            UserBean bean = data.getParcelableExtra(Constants.EXTRA_KEY_USER_BEAN);
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            intent.putExtra(Constants.EXTRA_KEY_USER_BEAN, bean);
+            setResult(RESULT_OK, intent);
+            finish();
+        }
     }
 
     private void initServices() {
-        bindService(new Intent(LoginActivity.this, DataManagerService.class), mConn, BIND_AUTO_CREATE);
+        bindService(new Intent(LoginActivity.this, UserDataManagerService.class), mConn, BIND_AUTO_CREATE);
     }
 
     private void initViews() {
@@ -119,7 +128,7 @@ public class LoginActivity extends Activity {
                 return;
             }
 
-            switch (mDataManagerService.checkUserAccount(userNameStr, passwordStr)) {
+            switch (mUserDataManagerService.checkUserAccount(userNameStr, passwordStr)) {
                 case Error.ERROR_ACCOUNT_NOT_EXIST:
                     setUserNameErrorState(true, R.string.login_activity_hint_user_name_is_not_exist);
                     setPasswordErrorState(false, 0);
@@ -132,7 +141,7 @@ public class LoginActivity extends Activity {
                     setPasswordErrorState(false, 0);
                     setUserNameErrorState(false, 0);
 
-                    UserBean bean = mDataManagerService.getUserInfo(userNameStr, passwordStr);
+                    UserBean bean = mUserDataManagerService.getUserInfo(userNameStr, passwordStr);
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     intent.putExtra(Constants.EXTRA_KEY_USER_BEAN, bean);
                     setResult(RESULT_OK, intent);

@@ -1,7 +1,6 @@
 package com.example.liu.seekjob.services;
 
 import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
@@ -9,16 +8,15 @@ import android.support.annotation.Nullable;
 
 import com.example.liu.seekjob.db.beans.UserBean;
 import com.example.liu.seekjob.utils.Error;
-import com.example.liu.seekjob.utils.Util;
 import com.google.gson.Gson;
 
-public class DataManagerService extends Service {
+public class UserDataManagerService extends Service {
     private IBinder mIBinder;
     private int mErrorCode;
 
     public class DataManagerBinder extends Binder {
-        public DataManagerService getService() {
-            return DataManagerService.this;
+        public UserDataManagerService getService() {
+            return UserDataManagerService.this;
         }
     }
 
@@ -50,5 +48,10 @@ public class DataManagerService extends Service {
         String userInfo = "{\"user_name\":\"test\",\"password\":\"test\",\"nick_name\":\"guest\","
                 + "\"mail_address\":\"test@gmail.com\", \"phone_number\":\"09012345678\", \"user_level\":0}";
         return new Gson().fromJson(userInfo, UserBean.class);
+    }
+
+    public int register(UserBean bean) {
+        String userInfo = new Gson().toJson(bean);
+        return Error.OK;
     }
 }

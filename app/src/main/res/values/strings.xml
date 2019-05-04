@@ -30,4 +30,13 @@
     <string name="create_account_activity_user_level">User Level</string>
     <string name="create_account_activity_private">Private</string>
     <string name="create_account_activity_company">Company</string>
+    <string name="create_account_activity_hint_user_name_cannot_be_null">User name cannot be null</string>
+    <string name="create_account_activity_hint_user_name_needs_at_least_8_digits">User name needs at least 8 digits</string>
+    <string name="create_account_activity_hint_user_name_only_has_number_and_letters">User name has only number and letters</string>
+    <string name="create_account_activity_hint_password_cannot_be_null">Password cannot be null</string>
+    <string name="create_account_activity_hint_password_needs_at_least_8_digits">Password needs at least 8 digits</string>
+    <string name="create_account_activity_hint_comfirm_password_cannot_be_null">Comfirm password cannot be null</string>
+    <string name="create_account_activity_hint_comfirm_password_does_not_equal_to_password">Comfirm password does not equal to password</string>
+    <string name="create_account_activity_hint_nick_name_cannot_be_null">Nick name cannot be null</string>
+    <string name="create_account_activity_hint_user_name_has_been_registered">User name has been registered</string>
 </resources>

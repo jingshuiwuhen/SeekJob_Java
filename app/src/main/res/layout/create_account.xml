@@ -120,18 +120,24 @@
                 android:id="@+id/cl_user_name_error_msg"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:visibility="gone">
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/user_name_error_msg_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.37" />
 
                 <TextView
                     android:id="@+id/tv_user_name_error_msg"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:autoSizeTextType="uniform"
+                    android:paddingStart="5dp"
                     android:textColor="@color/red"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.4"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="@id/user_name_error_msg_guideline" />
             </android.support.constraint.ConstraintLayout>
 
             <TextView
@@ -182,18 +188,24 @@
                 android:id="@+id/cl_password_error_msg"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:visibility="gone">
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/password_error_msg_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.37" />
 
                 <TextView
                     android:id="@+id/tv_password_error_msg"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:autoSizeTextType="uniform"
+                    android:paddingStart="5dp"
                     android:textColor="@color/red"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.4"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="@id/password_error_msg_guideline" />
             </android.support.constraint.ConstraintLayout>
 
             <TextView
@@ -244,18 +256,24 @@
                 android:id="@+id/cl_comfirm_password_error_msg"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:visibility="gone">
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/comfirm_password_error_msg_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.37" />
 
                 <TextView
                     android:id="@+id/tv_comfirm_password_error_msg"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:autoSizeTextType="uniform"
+                    android:paddingStart="5dp"
                     android:textColor="@color/red"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.4"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="@id/comfirm_password_error_msg_guideline" />
             </android.support.constraint.ConstraintLayout>
 
             <TextView
@@ -305,18 +323,24 @@
                 android:id="@+id/cl_nick_name_error_msg"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:visibility="gone">
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/nick_name_error_msg_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.37" />
 
                 <TextView
                     android:id="@+id/tv_nick_name_error_msg"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:autoSizeTextType="uniform"
+                    android:paddingStart="5dp"
                     android:textColor="@color/red"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.4"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="@id/nick_name_error_msg_guideline" />
             </android.support.constraint.ConstraintLayout>
 
             <TextView
