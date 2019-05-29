@@ -1,4 +1,4 @@
-package com.example.liu.seekjob.db.beans;
+package com.example.liu.seekjob.beans;
 
 import android.os.Parcel;
 import android.os.Parcelable;

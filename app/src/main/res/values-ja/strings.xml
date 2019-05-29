@@ -38,12 +38,12 @@
     <string name="create_account_activity_hint_nick_name_cannot_be_null">Nick name cannot be null</string>
     <string name="create_account_activity_hint_user_name_has_been_registered">User name has been registered</string>
 
-    <string name="all_jobs_fragment_new_job">New</string>
-    <string name="all_jobs_fragment_read">Read</string>
-    <string name="all_jobs_fragment_collect">Collect</string>
-    <string name="all_jobs_fragment_just_now">just now</string>
-    <string name="all_jobs_fragment_before_minute">%1$sminutes ago</string>
-    <string name="all_jobs_fragment_before_hour">%1$shours ago</string>
-    <string name="all_jobs_fragment_before_day">%1$sdays ago</string>
-    <string name="all_jobs_fragment_publish_time">publish on %1$s</string>
+    <string name="all_jobs_fragment_new_job">新着</string>
+    <string name="all_jobs_fragment_read">閲覧済</string>
+    <string name="all_jobs_fragment_collect">気に入り</string>
+    <string name="all_jobs_fragment_just_now">たった今</string>
+    <string name="all_jobs_fragment_before_minute">%1$s分前</string>
+    <string name="all_jobs_fragment_before_hour">%1$s時前</string>
+    <string name="all_jobs_fragment_before_day">%1$s日前</string>
+    <string name="all_jobs_fragment_publish_time">発表日 %1$s</string>
 </resources>

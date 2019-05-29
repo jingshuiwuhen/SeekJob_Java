@@ -6,7 +6,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-import com.example.liu.seekjob.db.beans.UserBean;
+import com.example.liu.seekjob.beans.UserBean;
 import com.example.liu.seekjob.utils.Error;
 import com.google.gson.Gson;
 

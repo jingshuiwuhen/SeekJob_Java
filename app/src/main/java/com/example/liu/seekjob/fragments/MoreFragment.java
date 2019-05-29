@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.example.liu.seekjob.R;
 import com.example.liu.seekjob.activities.LoginActivity;
 import com.example.liu.seekjob.activities.MainActivity;
-import com.example.liu.seekjob.db.beans.UserBean;
+import com.example.liu.seekjob.beans.UserBean;
 import com.example.liu.seekjob.utils.Constants;
 import com.example.liu.seekjob.utils.Error;
 import com.example.liu.seekjob.utils.Util;

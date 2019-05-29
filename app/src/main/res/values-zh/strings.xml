@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SeekJob</string>
 
-    <string name="footer_tab_item_title_all_jobs">All Jobs</string>
+    <string name="footer_tab_item_title_all_jobs">全部</string>
     <string name="footer_tab_item_title_publish">Publish</string>
     <string name="footer_tab_item_title_more">More</string>
 
@@ -38,12 +38,12 @@
     <string name="create_account_activity_hint_nick_name_cannot_be_null">Nick name cannot be null</string>
     <string name="create_account_activity_hint_user_name_has_been_registered">User name has been registered</string>
 
-    <string name="all_jobs_fragment_new_job">New</string>
-    <string name="all_jobs_fragment_read">Read</string>
-    <string name="all_jobs_fragment_collect">Collect</string>
-    <string name="all_jobs_fragment_just_now">just now</string>
-    <string name="all_jobs_fragment_before_minute">%1$sminutes ago</string>
-    <string name="all_jobs_fragment_before_hour">%1$shours ago</string>
-    <string name="all_jobs_fragment_before_day">%1$sdays ago</string>
-    <string name="all_jobs_fragment_publish_time">publish on %1$s</string>
+    <string name="all_jobs_fragment_new_job">最新</string>
+    <string name="all_jobs_fragment_read">已阅</string>
+    <string name="all_jobs_fragment_collect">已收藏</string>
+    <string name="all_jobs_fragment_just_now">刚刚</string>
+    <string name="all_jobs_fragment_before_minute">%1$s分钟前</string>
+    <string name="all_jobs_fragment_before_hour">%1$s小时前</string>
+    <string name="all_jobs_fragment_before_day">%1$s天前</string>
+    <string name="all_jobs_fragment_publish_time">发布于 %1$s</string>
 </resources>

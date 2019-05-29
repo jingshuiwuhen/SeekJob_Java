@@ -16,4 +16,10 @@ public class Constants {
     public static final int USER_LEVEL_PRIVATE = 1;
 
     public static final int USER_LEVEL_COMPANY = 2;
+
+    public static final int ALL_JOBS_LIST_ITEM_STATE_NEW = 0;
+
+    public static final int ALL_JOBS_LIST_ITEM_STATE_READ = 1;
+
+    public static final int ALL_JOBS_LIST_ITEM_STATE_COLLECT = 2;
 }

@@ -6,4 +6,5 @@
     <color name="footer_tab_item_title_color_select">#000000</color>
     <color name="red">#FF0000</color>
     <color name="lighter_gray">#ddd</color>
+    <color name="dark_gray">#9F9F9F</color>
 </resources>
